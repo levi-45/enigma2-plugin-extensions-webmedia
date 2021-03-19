@@ -1,0 +1,28 @@
+<screen name="JobViewNew" position="center,center" size="1280,720" title="WebMedia Job" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel position="40,40" zPosition="1" size="1200,640" backgroundColor="#40000000" /> 
+    <widget name="pixmap" position="942,372" size="200,200" zPosition="1" alphatest="on" />
+	<widget source="job_name" render="Label" position="100,100" size="480,100" font="Regular;28" backgroundColor="#40000000" />
+	<!--widget source="job_task" render="Label" position="100,150" size="480,50" font="Regular;23" backgroundColor="#40000000" /-->
+	<widget source="job_progress" render="Progress" position="105,250" size="480,36" borderWidth="2" backgroundColor="#40000000" />
+	<widget source="job_progress" render="Label" position="105,350" size="280,32" font="Regular;28" backgroundColor="#40000000" zPosition="2" halign="center" transparent="1">
+	    <convert type="ProgressToText" />
+	</widget>
+	<widget source="job_status" render="Label" position="100,405" size="480,30" font="Regular;23" backgroundColor="#40000000" />
+	<widget name="config" position="100,490" size="550,40" foregroundColor="#cccccc" backgroundColor="#40000000" />
+    <eLabel position="150,660" zPosition="1" size="200,30" backgroundColor="#f23d21" /> 
+    <eLabel position="152,662" zPosition="1" size="196,26" backgroundColor="#40000000" /> 
+    <eLabel position="350,660" zPosition="1" size="200,30" backgroundColor="#389416" />
+    <eLabel position="352,662" zPosition="1" size="196,26" backgroundColor="#40000000" />
+    <eLabel position="550,660" zPosition="1" size="400,30" backgroundColor="#0064c7" />
+    <eLabel position="552,662" zPosition="1" size="396,26" backgroundColor="#40000000" />
+
+    <widget source="cancelable" render="FixedLabel" text="Cancel" position="150,660" size="200,30" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;20" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2"> 
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="finished" render="FixedLabel" text="OK" position="350,660" size="200,30" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;20" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2"> 
+		<convert type="ConditionalShowHide" />
+	</widget>
+	<widget source="backgroundable" render="FixedLabel" text="Continue in background" position="550,660" size="400,30" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;20" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2">
+		<convert type="ConditionalShowHide" />
+	</widget>    
+</screen>

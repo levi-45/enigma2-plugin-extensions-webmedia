@@ -1,0 +1,64 @@
+<screen name="Playvid2" position="0,550" size="1280,150" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+            <!-- Background -->
+            <ePixmap position="0,2" zPosition="-1" size="1280,150" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/mp-infobar-bg.png"/>
+            <ePixmap position="400,22" size="20,20" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/yellow.png" alphatest="blend" /> 
+            <widget name="key_yellow" position="420,14" size="200,30" valign="center" halign="left" zPosition="4"  foregroundColor="#ffffff" font="Regular;16" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" /> 
+            <eLabel text="Subtitles" font="Regular;20" position="420,14" size="133,26" halign="left"  zPosition="4"  foregroundColor="white" backgroundColor="transpBlack" transparent="1"/>
+            <!-- Date -->
+            <widget source="global.CurrentTime" render="Label" position="70,16" size="124,22" font="Regular;18"  backgroundColor="black" foregroundColor="white" transparent="1" >
+                <convert type="ClockToText">Format:%d.%m.%Y</convert>
+            </widget>
+            <!-- Time -->
+            <ePixmap position="1100,20" zPosition="2" size="22,22" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/clock.png" alphatest="on" />
+            <widget source="global.CurrentTime" render="Label" position="1130,16" size="200,26" zPosition="2" font="Regular;18"  foregroundColor="#062748" backgroundColor="black" transparent="1">
+              <convert type="ClockToText">Format %H:%M:%S</convert>
+            </widget>			
+            <!-- Servicename -->
+            <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/icon_event.png" position="206,56" size="20,12" alphatest="on" />
+            <!-- Elapsed time -->
+            <widget source="session.CurrentService" render="Label" position="240,50" size="100,26" font="Regular;22"  foregroundColor="#062748"  backgroundColor="black" transparent="1" >
+                <convert type="ServicePosition">Position,ShowHours</convert>
+            </widget>
+            <widget source="session.CurrentService" render="Label" position="350,50" size="740,24" zPosition="2" font="Regular;20" halign="center" noWrap="1" foregroundColor="white" transparent="1" backgroundColor="background">
+                <convert type="ServiceName">Name</convert>
+            </widget>
+            <!-- movie length -->
+            <!-- Remaining time -->
+            <widget source="session.CurrentService" render="Label" position="1090,48" size="120,26" font="Regular;22" halign="right"  foregroundColor="red" backgroundColor="black" transparent="1" >
+                <convert type="ServicePosition">Remaining,Negate,ShowHours</convert>
+            </widget>
+            <widget source="session.CurrentService" render="PositionGauge" position="210,76" size="890,14" zPosition="2" pointer="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/pointerdvd.png:890,0" transparent="1" >
+                <convert type="ServicePosition">Gauge</convert>
+            </widget>
+            <!-- Audio icon (is there multichannel audio?) -->
+            <ePixmap position="206,100" size="100,20" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_dolby_off.png" alphatest="blend" /> 
+            <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_dolby_on.png" position="206,100" size="100,20" zPosition="2" alphatest="blend">
+                <convert type="ServiceInfo">IsMultichannel</convert>
+                <convert type="ConditionalShowHide"/>
+            </widget>
+            <!-- Videoformat icon (16:9?) -->
+            <ePixmap position="290,100" size="100,20" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_format_off.png" alphatest="blend" /> 
+            <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_format_on.png" position="290,100" zPosition="4" size="100,18" alphatest="blend" >
+                <convert type="ServiceInfo">IsWidescreen</convert>
+                <convert type="ConditionalShowHide" />
+            </widget>
+            <!-- HDTV icon -->
+            <ePixmap position="350,98" size="100,24" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_hd_off.png" alphatest="blend" /> 
+            <widget source="session.CurrentService" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/icon/ico_hd_on.png" position="350,98" size="50,24" zPosition="4" alphatest="blend">
+                <convert type="ServiceInfo">VideoWidth</convert>
+                <convert type="ValueRange">721,1980</convert>
+                <convert type="ConditionalShowHide" />
+            </widget>
+            <!-- VideoFormat -->
+            <eLabel text="Res" font="Regular;20" position="400,94" size="50,20"  foregroundColor="#062748" backgroundColor="black" transparent="1"/>
+            <widget source="session.CurrentService" render="Label" font="Regular;20" position="440,94" size="54,20" halign="right"  foregroundColor="white" backgroundColor="black" transparent="1">
+                <convert type="ServiceInfo">VideoWidth</convert>
+            </widget>
+            <eLabel text="x" font="Regular;16" position="504,96" size="14,22" halign="center"  backgroundColor="black" transparent="1"/>
+            <widget source="session.CurrentService" render="Label" font="Regular;20" position="530,94" size="54,22"   foregroundColor="white" backgroundColor="black" transparent="1">
+                <convert type="ServiceInfo">VideoHeight</convert>
+            </widget>		
+            <widget source="session.CurrentService" render="Label" position="1160,94" size="120,26" font="Regular;22"  foregroundColor="yellow" backgroundColor="black" transparent="1" >
+                <convert type="ServicePosition">Length</convert>
+            </widget>
+      </screen> 

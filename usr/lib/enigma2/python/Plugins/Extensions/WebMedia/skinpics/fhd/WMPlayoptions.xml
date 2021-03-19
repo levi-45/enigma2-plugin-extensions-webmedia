@@ -1,0 +1,38 @@
+<screen name="WMPlayoptions" position="center,center" size="1920,1080" title="WebMedia" flags="wfNoBorder" backgroundColor="transparent">
+            <ePixmap position="0,0" size="1920,1080" zPosition="-55" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/images/cvrfhd.png" alphatest="off" transparent="0" />
+            <ePixmap position="67,66" zPosition="2" size="150,70" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/WebMedia/skinpics/images/logo-webmedia.png" transparent="0" />      
+			<!--	
+            <eLabel position="60,60" zPosition="1" size="1800,960" backgroundColor="#40000000" /> 
+		
+            <eLabel position="1170,225" zPosition="2" size="600,450" backgroundColor="transparent" /> 
+            -->			
+            <eLabel text="WebMedia" position="1174,118" size="600,90" zPosition="4" font="Regular;75" backgroundColor="#40000000" foregroundColor="#389416" halign="center" />
+            <widget name="info" position="1200,586" zPosition="4" size="555,225" font="Regular; 40" foregroundColor="#0064c7" backgroundColor="#40000000" transparent="1" halign="left" valign="center" />
+            
+            <widget name="list" position="150,150" size="990,639" zPosition="2" foregroundColor="#ffffff" backgroundColor="#40000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#000000" scrollbarMode="showOnDemand" />
+<!--             
+            <widget name="list" position="150,150" size="990,780" itemHeight="60" zPosition="2" foregroundColor="#ffffff" backgroundColor="#40000000" foregroundColorSelected="#ffffff" backgroundColorSelected="#000000" scrollbarMode="showOnDemand" />
+ -->			
+	        <!-- pig --> 		
+            <widget source="session.VideoPicture" render="Pig" position="1160,224" size="637,360" zPosition="3" backgroundColor="transparent" />			
+					
+					
+			<!-- buttons -->
+			<!--
+			<eLabel position="225,990" zPosition="1" size="300,45" backgroundColor="#f23d21" /> 
+            <eLabel position="228,993" zPosition="1" size="294,39" backgroundColor="#000000" /> 
+            <eLabel position="525,990" zPosition="1" size="300,45" backgroundColor="#389416" />
+            <eLabel position="528,993" zPosition="1" size="294,39" backgroundColor="#000000" />
+            <eLabel position="825,990" zPosition="1" size="300,45" backgroundColor="#bab329" />
+            <eLabel position="828,993" zPosition="1" size="294,39" backgroundColor="#000000" />
+            <eLabel position="1125,990" zPosition="1" size="300,45" backgroundColor="#0064c7" />
+            <eLabel position="1128,993" zPosition="1" size="294,39" backgroundColor="#000000" />
+            <eLabel position="1425,990" zPosition="1" size="300,45" backgroundColor="#999999" />
+            <eLabel position="1423,993" zPosition="1" size="294,39" backgroundColor="#000000" />
+            <widget name="key_red" position="225,990" size="300,45" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;30" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" /> 
+            <widget name="key_green" position="525,990" size="300,45" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;30" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" /> 
+            <widget name="key_yellow" position="825,990" size="300,45" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;30" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" />
+            <widget name="key_blue" position="1125,990" size="300,45" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;30" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" />
+            <widget name="key_menu" position="1425,990" size="300,45" valign="center" halign="center" zPosition="4" foregroundColor="#ffffff" font="Regular;30" transparent="1" shadowColor="#25062748" shadowOffset="-2,-2" />
+            -->
+</screen>
